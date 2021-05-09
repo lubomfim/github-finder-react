@@ -1,7 +1,11 @@
+import * as S from './styles';
+
 function Home() {
   return (
     <div className="App">
-      <h1>Hellou</h1>
+      <S.Wrapper background="purple">
+        <h1>Hellou</h1>
+      </S.Wrapper>
     </div>
   );
 }
