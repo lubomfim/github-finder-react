@@ -23,6 +23,10 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 0;
   }
 
+  html {
+    font-size: 62.5%
+  }
+
 	html,
   body {
 		height: 100%;

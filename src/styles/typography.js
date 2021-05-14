@@ -1,13 +1,13 @@
 import { css } from 'styled-components';
 
-export const PRIMARY_FONT = "'Work Sans', sans-serif;";
+export const PRIMARY_FONT = "'Poppins', sans-serif;";
 
 export const SIZES = {
-  xl: '48px',
-  lg: '32px',
-  md: '22px',
-  sm: '18px',
-  xs: '14px',
+  xl: '4.8rem',
+  lg: '3.2rem',
+  md: '2.2rem',
+  sm: '1.8rem',
+  xs: '1.4rem',
 };
 
 export const TITLE_EXTRA_LARGE = css`

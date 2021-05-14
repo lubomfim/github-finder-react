@@ -2,21 +2,21 @@
  * PRIMARY COLOR
  */
 
-export const PRIMARY_COLOR = '#FF1510';
-export const PRIMARY_COLOR_LIGHT = '#FDECEC';
+export const PRIMARY_COLOR = '#ff5a6a';
+export const PRIMARY_COLOR_LIGHT = '#ffeeee';
 
 /**
  * SECONDARY COLOR
  */
 
-export const SECONDARY_COLOR = '#E7F6E7';
+export const SECONDARY_COLOR = '#ffcdcd';
 
 /**
  * GREYSCALE
  */
 
 export const GREY = '#8C8C8C';
-export const GREY_LIGHT = '#B9B9B9';
+export const GREY_LIGHT = '#cdcdd5';
 export const GREY_DARK = '#404040';
 
 /**

@@ -1,10 +1,10 @@
-# Pokemon Finder
+# Github Finder - Com React
 
 Projeto desenvolvido para aplicar novas estrutura de dados, styled-components, reducer e ferramentas que estou aprendendo.
 
 ## O que posso fazer nesse aplicativo?
 
-Poderá encontrar Pokemons, favoritar, listar e muito mais...
+Poderá encontrar usuários e seus repositórios
 
 ## Quais tecnologias serão utilizadas?
 
