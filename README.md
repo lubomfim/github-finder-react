@@ -8,7 +8,8 @@ Poderá encontrar usuários e seus repositórios
 
 ## Quais tecnologias serão utilizadas?
 
-- HTML, CSS E JS
-- REACT E STYLED-COMPONENTS
+- ReactJS
+- Styled-Components
+- GraphQL
 
 Ao decorrer do projeto, mais ferramentas serão adicionadas.
