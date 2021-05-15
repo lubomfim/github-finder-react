@@ -11,7 +11,7 @@ export const REPOSITORY = gql`
   }
 `;
 
-export const USER = gql`
+export const USER_PROFILE = gql`
   query USER($login: String!) {
     user(login: $login) {
       name
@@ -28,6 +28,14 @@ export const USER = gql`
         totalCount
       }
       url
+    }
+  }
+`;
+
+export const USER = gql`
+  query USER($login: String!) {
+    user(login: $login) {
+      id
     }
   }
 `;

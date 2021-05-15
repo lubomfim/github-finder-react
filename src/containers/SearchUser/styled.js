@@ -5,7 +5,7 @@ import * as C from 'styles/colors';
 
 export const SearchWrapper = styled.div`
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   max-width: 500px;
   width: 90%;
 `;
@@ -28,3 +28,5 @@ export const SearchButton = styled.button`
     box-shadow: inset 3px 3px ${C.WHITE};
   }
 `;
+
+export const SearchIcon = styled.img``;

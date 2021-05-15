@@ -18,4 +18,10 @@ export const Input = styled.input`
     color: ${C.SECONDARY_COLOR};
     font-size: 1.4rem;
   }
+
+  &:disabled {
+    background-color: ${C.DISABLED_COLOR};
+    cursor: normal;
+    user-select: none;
+  }
 `;
