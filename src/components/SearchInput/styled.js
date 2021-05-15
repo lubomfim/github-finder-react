@@ -13,6 +13,7 @@ export const Input = styled.input`
   width: 100%;
   font-family: ${T.SECONDARY_FONT};
   box-shadow: 3px 3px 0px ${C.BLACK};
+  border-radius: none;
 
   &::placeholder {
     color: ${C.SECONDARY_COLOR};
