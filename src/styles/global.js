@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 		border: none;
 		margin: 0;
+
 		padding: 0;
   }
 
@@ -19,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   select,
+  input,
   button {
     background: inherit;
     -webkit-appearance: none;
