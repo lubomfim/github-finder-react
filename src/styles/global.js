@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import * as T from './typography';
+import * as C from './colors';
 
 export const GlobalStyle = createGlobalStyle`
 	* {
@@ -9,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
   }
+
+  ${T.SegoeUI}
 
   ul,
   ol {
@@ -34,6 +37,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-family: ${T.PRIMARY_FONT};
+    background-color: ${C.PRIMARY_COLOR};
   }
 
 	a {
