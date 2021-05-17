@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  background: #FFF;
+  border: 1px solid #A7A7A7;
+  font-size: 1.6rem;
+  color: #000;
+  padding: 20px 18px;
+  outline: none;
+  width: 100%;
+  font-family: 'Segoe UI',sans-serif;
+  box-shadow: 3px 3px 0px #000;
+  -webkit-box-shadow: 3px 3px 0px #000;
+  -moz-box-shadow: 3px 3px 0px #000;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #A7A7A7;
+  font-size: 1.4rem;
+}
+
+.c0::-moz-placeholder {
+  color: #A7A7A7;
+  font-size: 1.4rem;
+}
+
+.c0:-ms-input-placeholder {
+  color: #A7A7A7;
+  font-size: 1.4rem;
+}
+
+.c0::placeholder {
+  color: #A7A7A7;
+  font-size: 1.4rem;
+}
+
+.c0:disabled {
+  background-color: #eee;
+  cursor: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<input
+    class="c0"
+    disabled=""
+    type="text"
+    value="userlogin"
+  />
+</DocumentFragment>
+`;
