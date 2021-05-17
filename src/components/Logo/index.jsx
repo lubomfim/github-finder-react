@@ -7,7 +7,7 @@ export const Logo = ({ $home }) => {
   return (
     <S.LogoWrapper $home={$home}>
       <S.LogoLink $home={$home} to="/">
-        <S.LogoImg src="images/logo/github.png" />
+        <S.LogoImg src="images/logo/github.png" alt="github logo" />
       </S.LogoLink>
     </S.LogoWrapper>
   );

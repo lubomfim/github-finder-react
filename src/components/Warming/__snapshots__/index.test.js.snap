@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  text-align: center;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+<div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Server offline. Try again later, please.
+    </p>
+  </div>
+</DocumentFragment>
+`;

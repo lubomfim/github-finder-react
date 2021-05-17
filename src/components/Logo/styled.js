@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const LogoWrapper = styled.header`
+export const LogoWrapper = styled.div`
   display: flex;
   ${({ $home }) => {
     if ($home) {
