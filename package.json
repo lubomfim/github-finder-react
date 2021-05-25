@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "github-finder-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,5 +46,14 @@
     "eslint-plugin-prettier": "^3.4.0",
     "jest-styled-components": "^7.0.4",
     "prettier": "^2.3.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+       "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/styles/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/services/**/*.js"
+    ]
   }
 }
