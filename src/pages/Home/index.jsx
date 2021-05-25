@@ -32,7 +32,7 @@ function Home() {
 
   useEffect(() => {
     if (data?.user && called && !loading) {
-      history.push(`user/${search}`);
+      history.push(`/${search}`);
     }
   }, [data, called, loading, history, search]);
 

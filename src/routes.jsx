@@ -1,3 +1,4 @@
+import User from 'pages/User';
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ const Routes = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/:user" component={User} />
       </Switch>
     </Router>
   );
