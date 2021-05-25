@@ -8,8 +8,8 @@ export const SearchInput = ({ placeholder, onChange, value, disabled }) => {
 };
 
 SearchInput.propTypes = {
-  placeholder: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   disabled: PropTypes.bool,
 };
