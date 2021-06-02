@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 
@@ -6,19 +6,27 @@ import { USER_PROFILE } from 'services/graphql/queries';
 import { Loader } from 'components/Loader';
 
 import * as S from './styled';
+import { useLazyQuery } from '@apollo/client';
 
 const UserProfile = ({ login }) => {
   const [userProfile, setUserProfile] = useState({});
-  const { loading, error, data } = useQuery(USER_PROFILE, {
+
+  const [runQuery, { loading, data }] = useLazyQuery(USER_PROFILE, {
     variables: {
-      login,
+      login: login,
     },
-    onCompleted: () => setUserProfile(data.user),
+    onError: (err) => console.log(err.message),
+    onCompleted: (newData) => setUserProfile(newData.user),
   });
+
+  useEffect(() => {
+    runQuery();
+  }, [runQuery]);
+
   return (
     <S.UserProfile>
       {loading && <Loader />}
-      {!loading && (
+      {!loading && data !== {} && (
         <React.Fragment>
           <S.UserProfileImgWrapper>
             <S.UserProfileImg src={userProfile.avatarUrl} alt={userProfile.login} />

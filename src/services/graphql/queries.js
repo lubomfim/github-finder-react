@@ -14,6 +14,7 @@ export const REPOSITORY = gql`
 export const USER_PROFILE = gql`
   query USER($login: String!) {
     user(login: $login) {
+      id
       name
       login
       bio
@@ -43,6 +44,7 @@ export const USER = gql`
 export const USER_REPOSITORIES = gql`
   query GET_REPOSITORIES($login: String!) {
     user(login: $login) {
+      id
       repositories(first: 30) {
         nodes {
           name

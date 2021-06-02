@@ -22,7 +22,8 @@ export const UserProfile = styled.div`
   @media (max-width: 600px) {
     max-width: 100%;
     height: auto;
-    padding: 30px 50px 80px;
+    padding: 80px 50px 30px;
+    border: none;
   }
 `;
 
@@ -70,4 +71,9 @@ export const GoBackButton = styled(Link)`
   background-color: ${C.PRIMARY_COLOR};
   font-size: 1.6rem;
   text-transform: uppercase;
+
+  @media (max-width: 600px) {
+    top: 0px;
+    bottom: auto;
+  }
 `;

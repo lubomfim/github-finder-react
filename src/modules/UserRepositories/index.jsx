@@ -1,25 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { projectName } from 'utils/projectName';
 
-import { useQuery } from '@apollo/client';
 import { USER_REPOSITORIES } from 'services/graphql/queries';
 
 import { Logo } from 'components/Logo';
 import { Loader } from 'components/Loader';
 
 import * as S from './styled';
+import { useLazyQuery } from '@apollo/client';
 
 const UserRepositories = ({ login }) => {
   const [userRepositories, setUserRepositories] = useState([]);
-  const { loading, error, data } = useQuery(USER_REPOSITORIES, {
+
+  const [runQuery, { loading, data }] = useLazyQuery(USER_REPOSITORIES, {
     variables: {
-      login,
+      login: login,
     },
-    onCompleted: () => setUserRepositories(data.user.repositories.nodes),
+    onError: (err) => console.log(err.message),
+    onCompleted: (newData) => setUserRepositories(newData.user.repositories.nodes),
   });
 
-  console.log(userRepositories);
+  useEffect(() => {
+    runQuery();
+  }, [runQuery]);
+
   return (
     <S.UserRepositories>
       {loading && <Loader />}
