@@ -21,14 +21,18 @@ function Home() {
     setSearch(e);
   }, []);
 
-  const handleClick = useCallback(() => {
-    runQuery({
-      variables: {
-        login: search,
-      },
-      onError: (err) => console.log(err.message),
-    });
-  }, [runQuery, search]);
+  const handleClick = useCallback(
+    (e) => {
+      e.preventDefault();
+      runQuery({
+        variables: {
+          login: search,
+        },
+        onError: (err) => console.log(err.message),
+      });
+    },
+    [runQuery, search],
+  );
 
   useEffect(() => {
     if (data?.user && called && !loading) {
@@ -43,14 +47,14 @@ function Home() {
         <S.HomeHeroTitle>{homeData.title}</S.HomeHeroTitle>
         <S.HomeHeroText>{homeData.text}</S.HomeHeroText>
       </S.HomeHeroWrapper>
-      <S.SearchWrapper onKeyPress={(e) => (e.code === 'Enter' ? handleClick() : null)}>
+      <S.SearchWrapper onKeyPress={(e) => (e.code === 'Enter' ? handleClick(e) : null)}>
         <SearchInput
           placeholder={homeData.placeholder}
           onChange={(e) => handleChange(e.target.value)}
           value={search}
           disabled={loading ? true : false}
         />
-        <S.SearchButton onClick={() => handleClick()} disabled={loading ? true : false}>
+        <S.SearchButton onClick={(e) => handleClick(e)} disabled={loading ? true : false}>
           <S.SearchIcon src={homeData.icon} alt={homeData.alt} />
         </S.SearchButton>
       </S.SearchWrapper>
