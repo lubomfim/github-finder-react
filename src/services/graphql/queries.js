@@ -39,3 +39,22 @@ export const USER = gql`
     }
   }
 `;
+
+export const USER_REPOSITORIES = gql`
+  query GET_REPOSITORIES($login: String!) {
+    user(login: $login) {
+      repositories(first: 30) {
+        nodes {
+          name
+          url
+          languages(first: 1) {
+            nodes {
+              name
+              color
+            }
+          }
+        }
+      }
+    }
+  }
+`;
